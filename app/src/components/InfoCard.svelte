@@ -52,7 +52,7 @@
           {#if props.links}
             <ul class="list-inline">
               {#each props.links as link}
-              <li class="list-inline-item"><a href="{link.href}">{link.text}</a></li>
+              <li class="list-inline-item">|| <a href="{link.href}">{link.text}</a> </li>
               {/each}
             </ul>
           {/if}

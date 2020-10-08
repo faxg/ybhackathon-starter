@@ -12,10 +12,17 @@
         href: "https://github.com/faxg/ybhackathon-starter",
       },
       {
-        text: "Docs",
+        text: "Azure Static Web Apps (SWA)",
         href:
-          "https://github.com/faxg/ybhackathon-starter/blob/master/README.MD",
+          "https://azure.microsoft.com/en-us/services/app-service/static/",
       },
+      {
+        text: "VS.code Extension ",
+        href:
+          "https://aka.ms/savscode",
+      },
+
+      
     ],
   };
 
@@ -27,7 +34,7 @@
   };
 
   let LearnerBadge = {
-    icon: "fa-list",
+    icon: "fa-certificate",
     smallTitle: "Azure Heroes",
     bigTitle: "Claim your 'Learner' Azure Hero Badge",
     border: "info",
@@ -40,7 +47,7 @@
   };
 
   let learningAndSupport = {
-    icon: "fa-list",
+    icon: "fa-graduation-cap",
     smallTitle: "Learning And Support",
     bigTitle: "Learn More and get Help...",
     border: "info",
@@ -49,14 +56,14 @@
         text: "Microsoft Learn",
         href: "https://docs.microsoft.com/en-us/learn/",
       },
-      { text: "Learn TV", href: "" },
-      { text: "Dev.to", href: "" },
-      { text: "Stackoverflow", href: "" },
+      { text: "Learn TV", href: "https://docs.microsoft.com/en-us/learn/tv/" },
+      { text: "Dev.to", href: "https://dev.to/" },
+      { text: "Stackoverflow", href: "https://stackoverflow.com/questions/tagged/azure" },
     ],
   };
 
   let starterTemplate = {
-    icon: "fa-list",
+    icon: "fa-rocket",
     smallTitle: "Azure Starter Template",
     bigTitle: "You can deploy this...",
     border: "info",
@@ -81,15 +88,12 @@
 <div class="row">
   <div class="col-4 offset-1 justify-content-center">
     <InfoCard props={Intro}>
-      This is the Azure Hackathon Starter Template. You'll find
+      Welcome to the YB Hackathon 2020 Azure Starter Template. You'll find
       <ul>
-        <li>Information on Azure Services you could use</li>
-        <li>QR Code for "Learner" Azure Hero Digital Badge</li>
-        <li>Our no-bs Microsoft.Source Developer Newsletter</li>
-        <li>How to share your PII with us !</li>
-        <li>
-          How to use this Application Starter (SWA - Fullstack Javascript)
-        </li>
+        <li>Azure Services you could use</li>
+        <li>Claim your "Learner" Azure Hero Badge</li>
+        <li>Learning and Support</li>
+        <li>How to fork & use this Starter Template</li>
       </ul>
     </InfoCard>
   </div>
@@ -99,14 +103,14 @@
       You may already have an idea for a project or a challenge. Here are some
       useful Azure Services:
       <ul>
-        <li>Azure Cognitive Services</li>
-        <li>Azure Machine Learning</li>
-        <li>Azure Jupyter Notebooks</li>
-        <li>Azure App Service - Web App for Containers</li>
-        <li>Azure Functions (Serverless)</li>
-        <li>Azure Static Web Apps (SWA)</li>
-        <li>Azure CosmosDB</li>
-        <li>Azure IoT</li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/">Azure Cognitive Services</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/services/machine-learning/">Azure Machine Learning</a></li>
+        <li><a href="https://notebooks.azure.com/"> Azure Jupyter Notebooks</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/services/app-service/containers/">Azure App Service - Web App for Containers</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-javascript">Azure Functions (Serverless)</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/services/app-service/static/">Azure Static Web Apps (SWA)</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/services/cosmos-db/">Azure CosmosDB</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/overview/iot/">Azure IoT</a></li>
       </ul>
     </InfoCard>
   </div>
@@ -123,6 +127,8 @@
   <div class="col-4 offset-1 justify-content-center">
     <InfoCard props={learningAndSupport}>
       Find help online on our Services
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/gWEYfyLu1ew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
     </InfoCard>
   </div>
 
