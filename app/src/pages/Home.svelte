@@ -66,10 +66,8 @@
 
 
 <style>
-  .row {
-    padding-top: 10px;
-  }
-  .col-4,.col-6 {
+
+  .col-3, .col-4,.col-6 {
     padding-top: 10px;
   }
 </style>
