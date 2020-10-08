@@ -17,6 +17,9 @@
 
 </script>
 
+
+
+
 <!-- Start: Card Info -->
 <div class="card shadow border-left-{props.border} py-2 h-100">
   <div class="card-body">
