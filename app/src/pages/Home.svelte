@@ -1,5 +1,5 @@
 <script>
-  import InfoCard from "../components/Infocard.svelte";
+  import InfoCard from "../components/InfoCard.svelte";
 
   let Intro = {
     icon: "fa-search",

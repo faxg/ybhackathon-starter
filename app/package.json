@@ -1,7 +1,7 @@
 {
-  "name": "algotecture-swa",
+  "name": "ybhackathonstarter",
   "version": "1.0.0",
-  "description": "Static Web App for Algotecture",
+  "description": "Static Web App for YB Hackathon 2020",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
