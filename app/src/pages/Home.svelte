@@ -79,7 +79,7 @@
 
 
 <div class="row">
-  <div class="col-4 justify-content-center">
+  <div class="col-4 offset-1 justify-content-center">
     <InfoCard props={Intro}>
       This is the Azure Hackathon Starter Template. You'll find
       <ul>
@@ -120,7 +120,7 @@
     </InfoCard>
   </div>
 
-  <div class="col-4 justify-content-center">
+  <div class="col-4 offset-1 justify-content-center">
     <InfoCard props={learningAndSupport}>
       Find help online on our Services
     </InfoCard>
