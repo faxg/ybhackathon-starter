@@ -1,7 +1,7 @@
 <script>
   // we may pass userInfo into this component (undefined if not logged in)
   export let userInfo = undefined; //{clientPrincipal: {userDeatils: "Foo"}};
-  export let brandName = "Algotecture";
+  export let brandName = "BrandName";
 </script>
 
 <style>

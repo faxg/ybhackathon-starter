@@ -9,20 +9,24 @@
 
   export let url = "";
 
-  // when ready, load user profile info
-  let userInfo = undefined; // {userDetails: "Foo"}
+  // when ready, load user profile info. 
+  // This gets injected into the child components.
+  let userInfo = undefined; 
+  
   onMount(async () => (userInfo = await getUserInfo()));
 </script>
+
+
 
 <Router {url}>
   <!-- The main content area -->
   <div class="d-flex flex-column" id="content-wrapper">
     <div id="content">
       <!-- The top navbar -->
-      <TopBar {userInfo} />
+      <TopBar {userInfo} brandName="Azure Starter 2020"/>
 
       <!-- Content area -->
-      <div class="container-fluid">
+      <div class="container-fluid h-100">
         <Route path="/">
           <Redirect path="/home" />
         </Route>
