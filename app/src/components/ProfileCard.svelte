@@ -5,19 +5,11 @@
 
   // reactive variables, gets updates whenever userInfo changes
   $: hash = MD5(userInfo.userDetails).toString();
-  $: avatarImageUrl = `https://www.gravatar.com/avatar/${hash}?d=robohash&size=140`
+  $: avatarImageUrl = `https://www.gravatar.com/avatar/${hash}?d=robohash&size=140`;
 </script>
 
-
 <style>
-  .card-profile {
-    width: 340px;
-    margin: 50px auto;
-    background-color: #e6e5e1;
-    border-radius: 0;
-    border: 0;
-    box-shadow: 1em 1em 2em rgba(0, 0, 0, 0.2);
-  }
+
   .card-profile .card-img-top {
     border-radius: 0;
   }
@@ -29,12 +21,12 @@
     border: 5px solid #e6e5e1;
   }
   .card-profile .card-title {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   .card-profile .card-title small {
     display: block;
-    font-size: .6em;
-    margin-top: .2em;
+    font-size: 0.6em;
+    margin-top: 0.2em;
   }
   .card-profile .card-links {
     margin-bottom: 25px;
@@ -43,45 +35,25 @@
     margin: 0 1em;
     font-size: 1.6em;
   }
-  .card-profile .card-links .fa:focus, .card-profile .card-links .fa:hover {
-    text-decoration: none;
-  }
-  .card-profile .card-links .fa.fa-twitter {
-    color: #68aade;
-  }
-  .card-profile .card-links .fa.fa-twitter:hover {
-    color: #3e92d5;
-  }
-  .card-profile .card-links .fa.fa-facebook {
-    color: #3b5999;
-  }
-  .card-profile .card-links .fa.fa-facebook:hover {
-    color: #2d4474;
-  }
-
 </style>
 
-<div class="row">
-  <div class="col-3">
+<div class="card card-profile text-center">
+  <img
+    alt=""
+    class="card-img-top"
+    src="https://partner.microsoft.com/-/media/mssc/mpn/partner/solutions/images/azure-500x281-v2.ashx" />
 
-    <div class='card card-profile text-center'>
-      <img alt='' class='card-img-top' src='https://unsplash.it/340/160?image=354'>
-
-        <div class='card-block'>
-        <img alt='' class='card-img-profile' src='{avatarImageUrl}'>
-        <h4 class='card-title'>
-          {userInfo.userDetails}
-          <small>Logged in via <b>{userInfo.identityProvider}</b></small>
-        </h4>
-        <div class='card-links'>
-          <a href='#'><i class='fa fa-github'></i></a>
-          <a class='fa fa-linkedin' href='#'></a>
-          <a class='fa fa-twitter' href='#'></a>
-          <a class='fa fa-facebook' href='#'></a>
-  
-        </div>
-      </div>
+  <div class="card-block">
+    <img alt="" class="card-img-profile" src={avatarImageUrl} />
+    <h4 class="card-title">
+      {userInfo.userDetails}
+      <small>Logged in via <b>{userInfo.identityProvider}</b></small>
+    </h4>
+    <div class="card-links">
+      <a href="#"><i class="fab fa-github" /></a>
+      <a class="fab fa-linkedin" href="#" />
+      <a class="fab fa-twitter" href="#" />
+      <a class="fab fa-facebook" href="#" />
     </div>
   </div>
 </div>
-

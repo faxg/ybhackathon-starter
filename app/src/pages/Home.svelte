@@ -155,6 +155,14 @@
         <li>
           <a href="https://azure.microsoft.com/en-us/overview/iot/">Azure IoT</a>
         </li>
+        <li>
+          <a href="https://azure.microsoft.com/en-us/services/signalr-service/">Azure SignalR Service (Real-time)</a>
+        </li>
+        <li>
+          <a href="https://docs.microsoft.com/en-us/gaming/playfab/">Azure PlayFab (Gamification / leaderboards ...)</a>
+        </li>
+
+        
       </ul>
     </InfoCard>
   </div>
