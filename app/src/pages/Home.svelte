@@ -65,8 +65,15 @@
   let starterTemplate = {
     icon: "fa-rocket",
     smallTitle: "Azure Starter Template",
-    bigTitle: "You can deploy this...",
+    bigTitle: "How to use this for your project",
     border: "info",
+    links: [
+      {
+        text: "Learn more about Azure Static Web Apps (SWA)",
+        href: "https://aka.ms/staticwebapps",
+      }
+    ]
+
   };
 </script>
 
@@ -74,8 +81,11 @@
 
 <style>
 
-  .col-3, .col-4,.col-6 {
+  .col-sm-12, .col-md-6, .col-lg-4, .col-xl-4 {
     padding-top: 10px;
+  }
+  .badge-icon, .qr-code {
+    height: 128px;
   }
 </style>
 
@@ -86,19 +96,21 @@
 
 
 <div class="row">
-  <div class="col-4 offset-1 justify-content-center">
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-justify-content-center">
     <InfoCard props={Intro}>
-      Welcome to the YB Hackathon 2020 Azure Starter Template. You'll find
+      Welcome to the YB Hackathon 2020 Azure Starter Template. You'll find information on:
       <ul>
         <li>Azure Services you could use</li>
-        <li>Claim your "Learner" Azure Hero Badge</li>
-        <li>Learning and Support</li>
+        <li>How to claim your "Learner" Azure Hero Badge</li>
+        <li>How to find Learning material and get support</li>
         <li>How to fork & use this Starter Template</li>
+        <li>How to share your PII with us (a.k.a. sign up for <code>Microsoft.source</code> newsletter)</li>
+
       </ul>
     </InfoCard>
   </div>
 
-  <div class="col-3 justify-content-center">
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4  justify-content-center">
     <InfoCard props={Services}>
       You may already have an idea for a project or a challenge. Here are some
       useful Azure Services:
@@ -115,43 +127,56 @@
     </InfoCard>
   </div>
 
-  <div class="col-3 justify-content-center">
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center">
     <InfoCard props={LearnerBadge}>
       You can claim your Azure Hero Learner Badge here.
 
-      <img class="img img-fluid" style="height: 128px" src="/img/learner.png" />
-      <img class="img img-fluid" style="height: 128px" src="/img/learner-qr.png" />
+      <img class="img img-fluid badge-icon"  src="/img/learner.png" />
+      <img class="img img-fluid qr-code"  src="/img/learner-qr.png" />
     </InfoCard>
   </div>
 
-  <div class="col-4 offset-1 justify-content-center">
+
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center">
     <InfoCard props={learningAndSupport}>
-      Find help online on our Services
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gWEYfyLu1ew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      Find help online. We have lots of articles, tutorials and videos available.
+
+      
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe 
+        title="Intro to Static Web Apps"
+        class="embed-responsive-item"
+        src="https://www.youtube.com/embed/gWEYfyLu1ew" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    
+      </div>
       
     </InfoCard>
   </div>
 
-  <div class="col-6 justify-content-center">
+  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 justify-content-center">
     <InfoCard props={starterTemplate}>
-      Welcome to the <b>YB Hackathon Starter</b> on Azure.&nbsp; <br /> This
-      is an example application that serves multiple purposes:
+      This is the <b>YB Hackathon Starter</b> on Azure.&nbsp; <br /> 
+      You can use this as a starting point for your own web application.
+      It's <b>Full-Stack Javascript</b> (for now) :
       <ul>
         <li>
-          <b>Frontend</b>: a website that contains links to docs on the
-          Migros Hackathon API and selected Azure Cloud Services. Written in <a
+          <b>Frontend</b>: (this) website that contains links to docs on the
+           Event and selected Azure Cloud Services. Written in <a
             href="https://svelte.dev/">Svelte</a>, but many frameworks are
-          supported (Angular, React, ...)
+          supported (Angular, React, ...).
+          Just build your own frontend in the <code>/app</code> and tell Azure where to find the <code>npm build</code> results.
+          (e.g. /app/public/build) 
         </li>
         <li>
-          <b>Example API</b>: Serverless (Azure Functions) backend <code>/api</code>
-          that retrieves data from the Migros data stores. Written in JavaScript
-          / NodeJS
+          <b>API</b>: Serverless (Azure Functions) backend <code>/api</code>.
+          Implement your serverless backend in JavaScript/Typescript.
         </li>
       </ul>
       You can clone & deploy this to Azure in 5 minutes. You'll get: <img class="img-fluid" width="100%" alt="SWA Overview" src="https://azurecomcdn.azureedge.net/cvt-4abbf0604519d6747e8628e7d4a627c7bc7d78cea01076877c54698df471f916/images/page/services/app-service/static/value-prop-2.png" />
-      <small><a href="https://aka.ms/staticwebapps">Learn more about Azure
-          Static Web Apps (SWA)</a></small>
+
     </InfoCard>
   </div>
 

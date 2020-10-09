@@ -6,6 +6,7 @@
       },
       {
         "route": "/profile/*",
+        "serve": "/profile",
         "allowedRoles": ["authenticated"]
       },
       {
