@@ -17,16 +17,11 @@ A running version of this here: http://aka.ms/YBHackathonStarter
 
 
 
-## What can I do with it ?
-
-Two things:
-* Use it as a starting point to find relevant docs on Azure services: http://aka.ms/YBHackathonStarter
-* Clone & use the App as a base for your own project - it works great!
 
 ## How do I use this Template for my own App?
 
 1. Fork this repo on GitHub. It's a Template repository, so just click the green 
-[![Use this Template button](https://github.com/faxg/ybhackathon-starter/blob/master/app/public/img/use-this-template.png?raw=true)](https://github.com/faxg/ybhackathon-starter/generate)
+[![Use this Template button](https://github.com/faxg/ybhackathon-starter/blob/master/app/public/img/use-this-template.png?raw=true)](https://github.com/faxg/ybhackathon-starter/generate) button
 
 2. Go to your new repository and then: 
 [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.StaticApp)
