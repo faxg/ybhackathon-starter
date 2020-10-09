@@ -25,7 +25,8 @@ Two things:
 
 ## How do I use this Template for my own App?
 
-1. Fork this repo on GitHub (it's a template project)
+1. Fork this repo on GitHub. It's a Template repository, so just click the green 
+[![Use this Template button](https://github.com/faxg/ybhackathon-starter/blob/master/app/public/img/use-this-template.png?raw=true)](https://github.com/faxg/ybhackathon-starter/generate)
 
 2. Go to your new repository and then: 
 [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false#create/Microsoft.StaticApp)

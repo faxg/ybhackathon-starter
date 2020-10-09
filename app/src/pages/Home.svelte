@@ -164,8 +164,8 @@
       You can claim your Azure Hero Learner Badge here.
       <br/>
       <span>
-        <img class="img img-fluid badge-icon" src="/img/learner.png" />
-        <img class="img img-fluid qr-code" src="/img/learner-qr.png" />
+        <img alt="Azure Heroes Learner" class="img img-fluid badge-icon" src="/img/learner.png" />
+        <img alt="Azure Heroes QR" class="img img-fluid qr-code" src="/img/learner-qr.png" />
       </span>
     </InfoCard>
   </div>
@@ -198,7 +198,7 @@
       (for now) :
       <ul>
         <li>
-          <b>Frontend</b>: (this) website that contains links to docs on the
+          <b>Frontend</b>: website that contains links to docs on the
           Event and selected Azure Cloud Services. Written in
           <a href="https://svelte.dev/">Svelte</a>, but many frameworks are
           supported (Angular, React, ...). Just build your own frontend in the
