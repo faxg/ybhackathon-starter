@@ -1,5 +1,6 @@
 <script>
   import InfoCard from "../components/InfoCard.svelte";
+  import util from '../utils/auth-utils.js'
 
   let Intro = {
     icon: "fa-search",
@@ -159,10 +160,8 @@
           <a href="https://azure.microsoft.com/en-us/services/signalr-service/">Azure SignalR Service (Real-time)</a>
         </li>
         <li>
-          <a href="https://docs.microsoft.com/en-us/gaming/playfab/">Azure PlayFab (Gamification / leaderboards ...)</a>
-        </li>
-
-        
+          <a href="https://docs.microsoft.com/en-us/gaming/playfab/">Azure PlayFab</a>
+        </li>        
       </ul>
     </InfoCard>
   </div>
@@ -172,8 +171,10 @@
       You can claim your Azure Hero Learner Badge here.
       <br/>
       <span>
-        <img alt="Azure Heroes Learner" class="img img-fluid badge-icon" src="/img/learner.png" />
-        <img alt="Azure Heroes QR" class="img img-fluid qr-code" src="/img/learner-qr.png" />
+        <img alt="Azure Heroes Learner" class="img img-fluid badge-icon" 
+            src="{`${util.API}/get-badge?type=learner&what=badger`}" />
+        <img alt="Azure Heroes QR" class="img img-fluid qr-code" 
+            src="{`${util.API}/get-badge?type=learner&what=qr`}" />
       </span>
     </InfoCard>
   </div>

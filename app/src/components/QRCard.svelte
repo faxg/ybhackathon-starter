@@ -1,20 +1,26 @@
 <script>
-    export let icon = "fa-map-marker-alt" // fa-route fa-receipt fa-shopping-cart
-    export let border = "info" // success info ...
-    export let smallTitle = "Azure Heroes"
-    export let bigTitle = "Claim your Builder Badge here !"
-    export let links = undefined;
+    import utils from '../utils/auth-utils.js';
+    
+    export let title = "Claim your Learner Badge here !"
+    export let type = "learner";
+
+    let qrUrl = `${utils.API}/get-badge?type=${type}&what=qr`;
+    let badgerUrl = `${utils.API}/get-badge?type=${type}&what=badger`;
 
     export let props = {
-      icon,
-      border,
-      smallTitle,
-      bigTitle,
-      links
+      title,
+      qrUrl,
+      badgerUrl
     };
 </script>
 
 
+<style>
+  .img-badger, .img-qrcode {
+    width: 256px;
+
+  }
+</style>
 
 
 <!-- Start: Card Info -->
@@ -23,24 +29,24 @@
     <div class="row align-items-center no-gutters">
       <div class="col mr-2">
         <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
-          <span>{props.smallTitle}</span>
-        </div>
-        <div class="row no-gutters align-items-center">
-          <div class="col-auto">
-            <div class="text-dark font-weight-bold h5 mb-0 mr-3">
-              <span>{props.bigTitle}</span>
-            </div>
-          </div>
+          <span>{props.title}</span>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-12 h-100">
+      <div class="col-6 h-100">
         <p>&nbsp;</p>
         <div>
-            <img class="img img-fluid" src="/api/get-badge" alt="" />
+            <img class="img img-fluid img-qrcode" src="{props.badgerUrl}" alt="" />
         </div>
       </div>
+      <div class="col-6 h-100">
+        <p>&nbsp;</p>
+        <div>
+            <img class="img img-fluid img-qrcode" src="{props.qrUrl}" alt="" />
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

@@ -10,12 +10,18 @@ const readFileAsync = util.promisify(fs.readFile);
 // see https://github.com/axios/axios#axios-api
 const axios = require('axios');
 
-const filenameQR = './BadgeGET/builder-qr.png'
+const assetBasePath = "./BadgeGET/assets";
+
 
 module.exports = async function (context, req) {
     context.log('HTTP trigger: GET badge');
 
-    let data = await readFileAsync(filenameQR);
+    const type= req.query.type || 'learner' ;
+    const what =  req.query.what || 'badger';
+
+    const filename = `${assetBasePath}/${type}-${what}.png`
+
+    let data = await readFileAsync(filename);
 
 
     context.res = {
