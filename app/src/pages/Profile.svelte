@@ -18,10 +18,10 @@
 
 
 <div class="row">
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <ProfileCard {userInfo} />
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <QRCard type="builder" />
     </div>
 

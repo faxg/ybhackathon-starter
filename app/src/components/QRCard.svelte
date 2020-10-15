@@ -1,7 +1,7 @@
 <script>
     import utils from '../utils/auth-utils.js';
     
-    export let title = "Claim your Learner Badge here !"
+    export let title = "Claim your Badge here !"
     export let type = "learner";
 
     let qrUrl = `${utils.API}/get-badge?type=${type}&what=qr`;
@@ -16,9 +16,13 @@
 
 
 <style>
-  .img-badger, .img-qrcode {
-    width: 256px;
 
+  .img-badger {
+    width: 256px;
+  }
+
+  .img-qrcode {
+    width: 256px;
   }
 </style>
 
@@ -31,20 +35,21 @@
         <div class="text-uppercase text-info font-weight-bold text-xs mb-1">
           <span>{props.title}</span>
         </div>
+
+        If you built your Hackathon project on Azure, you can claim your <b>Builder</b> Azure Hero here:
+
       </div>
     </div>
     <div class="row">
-      <div class="col-6 h-100">
-        <p>&nbsp;</p>
-        <div>
-            <img class="img img-fluid img-qrcode" src="{props.badgerUrl}" alt="" />
-        </div>
+      <div class="col-6 h-50">
+          <img class="img img-fluid img-qrcode" src="{props.qrUrl}" alt="" />
       </div>
-      <div class="col-6 h-100">
-        <p>&nbsp;</p>
-        <div>
-            <img class="img img-fluid img-qrcode" src="{props.qrUrl}" alt="" />
-        </div>
+      <div class="col-6 h-50">
+          <img class="img img-fluid img-badger" src="{props.badgerUrl}" alt="" />
+          Builder Badger
+      </div>
+      <div class="col-12 h-50">
+        Just scan the QR code and follow the instructions. You can collect multiple badgers by learning, building and creating meaningful contributions to our Azure tech community.
       </div>
 
     </div>
