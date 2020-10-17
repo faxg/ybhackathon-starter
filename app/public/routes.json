@@ -3,7 +3,7 @@
       {
         "route": "/logout",
         "serve": "/.auth/logout"
-      },
+      }, 
       {
         "route": "/admin/*",
         "allowedRoles": ["administrator"]
